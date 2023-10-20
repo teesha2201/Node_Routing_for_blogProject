@@ -1,12 +1,12 @@
 const  blog = require("../Store/BlogStore")
 
 const BlogData = (req,res)=>{
-    const getCategory = req.query.Category;
+    // const getCategory = req.query.Category;
     // const getId= req.params.id;
     // console.log(getCategory,getId)
     // const filterCategory = blog.filter((item)=>item.Category==getCategory && item.id==getId)
-    const filterCategory = blog.filter((item)=>item.Category==getCategory)
-    res.send(filterCategory);
+    // const filterCategory = blog.filter((item)=>item.Category==getCategory)
+    res.send(blog);
 } 
 module.exports =BlogData
 

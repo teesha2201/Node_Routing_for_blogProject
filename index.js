@@ -2,17 +2,17 @@ const express = require("express");
 const app = express();
 const port = 9000
 const BlogRouting = require("./Routing/routingApi")
-const {authentication} = require("./Middleware/authentication")
+// const {authentication} = require("./Middleware/authentication")
 const cors = require('cors')
 
 app.use(cors({
     origin:"*" 
 }))
 
-app.use(authentication)
+// app.use(authentication)
 app.use("/api/main",BlogRouting)
 
-BlogRouting.get("")
+
 
 app.get("/",(req,res)=>{
     res.send("Server is Running ")
